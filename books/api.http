@@ -1,3 +1,7 @@
+###################################################
+# This contains all the API calls used in the App #
+###################################################
+
 # Gets all books
 GET http://localhost:3001/books HTTP/1.1
 Content-Type: application/json
