@@ -5,7 +5,7 @@ import useBooksContext from "../hooks/use-books-context";
 
 function BookShow({ book }) {
   const [showEdit, setShowEdit] = useState(false);
-  const { deleteBookById, editBookByID } = useBooksContext();
+  const { deleteBookById } = useBooksContext();
 
   const handleDeleteClick = () => {
     deleteBookById(book.id);
@@ -15,14 +15,13 @@ function BookShow({ book }) {
     setShowEdit(!showEdit);
   };
 
-  const handleSubmit = (id, newTitle) => {
+  const handleSubmit = () => {
     setShowEdit(false);
-    editBookByID(id, newTitle);
   };
 
   let content = <h3>{book.title}</h3>;
   if (showEdit) {
-    content = <BookEdit onSubmit={handleSubmit} book={book} />;
+    content = <BookEdit book={book} onSubmit={handleSubmit} />;
   }
 
   return (
