@@ -22,7 +22,7 @@ function Buttons({
       "border-red-500 bg-red-400 text-white": danger,
       "rounded-full": rounded,
       "bg-white": outline,
-      "text-violet-600": outline && primary,
+      "text-violet-500": outline && primary,
       "text-slate-500": outline && secondary,
       "text-green-500": outline && success,
       "text-yellow-500": outline && warning,

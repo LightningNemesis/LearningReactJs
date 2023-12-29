@@ -46,3 +46,32 @@ Scenario: We can have 2 types of button: ```Success``` ```Warning```
 
 How do we ensure only 1 type is passed as true?
 ~ calls for *PropType* checking
+
+Check ```src/Button.js``` for example; we have used a *custom* react-proptype
+
+
+# Pages & Components
+### What is the difference between Components & Pages?
+- Components: Reusable & does not contain a lot of content (Buttons, Search Bar, DropDown)
+- Pages: Not Reusable, contain a lot of content (LandingPage, CheckoutPage, LoginPage)
+
+### How to *best* organize project pages?
+Do a hybrid organization (by Features & Types):
+
+src/
+  - Components
+    - Forms
+      - ```input.js```
+      - ```SearchBar.js```
+    - Products
+      -  ```ProductList.js```
+      -  ```ProductShow.js```
+  - Pages
+    - ```LoginPage.js```
+    - ```LogoutPage.js```
+    - ```CartPage.js```
+
+
+
+
+
