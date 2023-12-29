@@ -13,7 +13,7 @@ function Buttons({
 }) {
   const classes = className(
     rest.className,
-    "flex items-center mx-1.5 px-3 py-1.5 border",
+    "flex items-center mx-1.5 my-1.5 px-3 py-1.5 border",
     {
       "border-violet-500 bg-violet-400 text-white": primary,
       "border-gray-900 bg-grey-900 text-slate-900": secondary,
