@@ -1,25 +1,47 @@
+import {
+  FcAreaChart,
+  FcElectronics,
+  FcShipped,
+  FcTimeline,
+} from "react-icons/fc";
 import Button from "./Button";
 
 function App() {
+  const handleClick = () => {
+    console.log("Button clicked!!");
+  };
+
   return (
     <div>
       <div>
-        <Button />
+        <Button onClick={handleClick} className={"my-2"}  primary rounded outline>
+          <FcAreaChart />
+          primary
+        </Button>
       </div>
       <div>
-        <Button />
+        <Button onClick={handleClick} secondary rounded outline>
+          <FcElectronics />
+          secondary
+        </Button>
       </div>
       <div>
-        <Button />
+        <Button onMouseEnter={handleClick} success rounded>
+          <FcShipped />
+          success
+        </Button>
       </div>
       <div>
-        <Button />
+        <Button onMouseLeave={handleClick} warning rounded outline>
+          <FcElectronics />
+          warning
+        </Button>
       </div>
       <div>
-        <Button />
-      </div>
-      <div>
-        <Button />
+        <Button danger rounded>
+          <FcTimeline />
+          danger
+        </Button>
       </div>
     </div>
   );
