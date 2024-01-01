@@ -83,14 +83,19 @@ We use an `eventHandler` for capturing the user action as *input*
 <br/>
 We use `states` to achieve this; change value of a state to cause the page/component to rerender & reflect changes
 
-<details>
-    <summary>Q: Where to define a child's state (inside Parent or Child component)?</summary>
-    <p>Does any component besides Child, need to access child's state?
-    <br/>If yes, then inside Parent. If no, then inside Child.
-    <p>Note: React does not allow sharing states between "sibling" components</p>
-    </p>
-    
-</details>
+### Q: Where to define a child's state (inside Parent or Child component)?
+Does any component besides child component, need to access its state?
+- Yes: inside Parent (Since React does not share states between sibling components)
+  - Will need to pass state value & update function to children components
+- No: Declare inside Child
+
+
+## Event Handling in React
+### Q: How to check time taken for 2 events to occur?
+Use `window.timeOne = performance.now()` for event 1 & `window.timeTwo = performance.now()` for event 2
+
+Now call values for `timeOne` & `timeTwo` in browser's console & compare values.
+
 
 
 
