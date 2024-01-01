@@ -92,9 +92,9 @@ Does any component besides child component, need to access its state?
 
 ## Event Handling in React
 ### Q: How to check time taken for 2 events to occur?
-Use `window.timeOne = performance.now()` for event 1 & `window.timeTwo = performance.now()` for event 2
+Use ```window.timeOne = performance.now()``` for event 1 & ```window.timeTwo = performance.now()``` for event 2
 
-Now call values for `timeOne` & `timeTwo` in browser's console & compare values.
+Now call values for ```timeOne``` & ```timeTwo``` in browser's console & compare values.
 
 
 
