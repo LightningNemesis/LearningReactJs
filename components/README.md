@@ -96,6 +96,8 @@ Use ```window.timeOne = performance.now()``` for event 1 & ```window.timeTwo = p
 
 Now call values for ```timeOne``` & ```timeTwo``` in browser's console & compare values.
 
+<image src="./READMEassets/useEffectCleanUp.png"/>
+
 
 
 
