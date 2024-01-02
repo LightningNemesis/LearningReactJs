@@ -98,7 +98,24 @@ Now call values for ```timeOne``` & ```timeTwo``` in browser's console & compare
 
 <image src="./READMEassets/useEffectCleanUp.png"/>
 
+<br>
 
+# Navigation in React
 
+Issue: Normal navigation between pages via:
+- clicking on forward/back browser button
+- clicking on links within page
+
+Causes page to reload (default behavior) and we lose all API response data fetched.
+
+This leads to making tons of API calls since we keep losing data on every reload.
+
+Solution:
+- Use `pushState` to updated *pathNames* in browser [going from `/home` -> `/cart`]
+- Use a `custom link` to render links:
+  - User wants to go to `Path A` within our App -> use `Custom Link`
+  - User wants to go to `Domain X` outside our App -> use `HTML link element (default <a>)`
+
+<image src="./READMEassets/navigationSteps.png"/>
 
 
