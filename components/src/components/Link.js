@@ -1,14 +1,18 @@
 import classNames from "classnames";
-import useNavigation from "../hooks/use-navigation"
+import useNavigation from "../hooks/use-navigation";
 
 // to: Path we want to navigate to
 // children: Text we want to render inside our Link
 
 // GOAL of <a> element here: Clicking on link does NOT cause a total page refresh
-function Link({ to, children }) {
-  const { navigate } = useNavigation();
+function Link({ to, children, className, activeClassName }) {
+  const { navigate, currentPath } = useNavigation();
 
-  const classes = classNames('text-blue-500')
+  const classes = classNames(
+    "text-blue-500",
+    className,
+    currentPath === to && activeClassName
+  );
 
   const handleClick = (event) => {
     // If CMD (MAC) or CTRL (Windows) key is held while clicking link, use normal browser behavior
@@ -23,7 +27,11 @@ function Link({ to, children }) {
     navigate(to);
   };
 
-  return <a className={classes} href={to} onClick={handleClick}>{children}</a>;
+  return (
+    <a className={classes} href={to} onClick={handleClick}>
+      {children}
+    </a>
+  );
 }
 
 export default Link;
